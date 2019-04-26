@@ -6,6 +6,10 @@ class TinyURL extends Component {
     return (
       <div>
         <h1>URLs</h1>
+        <form>
+            <input></input>
+            <button>Create URL</button>
+        </form>
       </div>
     );
   }
