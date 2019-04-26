@@ -6,6 +6,7 @@ import {
   Redirect,
   Switch
 } from "react-router-dom";
+import TinyURL from "../TinyURL/TinyURL"
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
         <Router>
           <div>
             <Switch>
+              <Route path="/" exact component={TinyURL}/>
               {/* If none of the other routes matched, we will show a 404. */}
               <Route render={() => <h1>404</h1>} />
             </Switch>
