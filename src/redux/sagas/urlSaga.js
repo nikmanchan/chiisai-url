@@ -1,6 +1,6 @@
 import { takeLatest } from 'redux-saga/effects';
 
-// worker Saga: will be fired on 'SEND_TRIP_DATA' actions
+// worker Saga: will be fired on 'SEND_URL_DATA' actions
 function addURL() {
     console.log('adding URL data!');
 
