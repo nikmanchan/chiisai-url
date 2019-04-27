@@ -10,6 +10,16 @@ const router = express.Router();
 router.get('/', rejectUnauthenticated, (req, res) => {
     // Send back user object from the session (previously queried from the database)
     res.send(req.user);
-  });
+});
+
+// Handles POST request with new user data
+router.post('/sign-up', (req, res, next) => {
+    const username = req.body.username;
+    const password = encryptLib.encryptPassword(req.body.password);
+    const queryText = 'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id';
+    pool.query(queryText, [username, password])
+        .then(() => { res.sendStatus(201); })
+        .catch((err) => { next(err); });
+});
 
 module.exports = router;
