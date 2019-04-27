@@ -3,6 +3,8 @@ require('dotenv').config();
 
 const app = express();
 const bodyParser = require('body-parser');
+const sessionMiddleware = require('./modules/session-middleware');
+
 
 // Route includes
 const userRouter = require('./routes/user.router');
@@ -10,6 +12,9 @@ const userRouter = require('./routes/user.router');
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Passport Session Configuration //
+app.use(sessionMiddleware);
 
 /* Routes */
 app.use('/api/user', userRouter);
