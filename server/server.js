@@ -11,6 +11,9 @@ const userRouter = require('./routes/user.router');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+/* Routes */
+app.use('/api/user', userRouter);
+
 // Serve static files
 app.use(express.static('build'));
 
