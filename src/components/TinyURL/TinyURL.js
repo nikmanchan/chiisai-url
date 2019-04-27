@@ -11,13 +11,19 @@ class TinyURL extends Component {
         });
     };
 
+    handleFormSubmit = (event) => {
+        event.preventDefault();
+        console.log("URL submitted!");
+        
+    }
+
     render() {
         return (
             <div>
                 <h1>URLs</h1>
-                <form>
-                    <input type="url" value={this.state.originalURL} onChange={this.handleInputChange('originalURL')}></input>
-                    <button>Create URL</button>
+                <form onSubmit={this.handleFormSubmit}>
+                    <input type="url" required value={this.state.originalURL} onChange={this.handleInputChange('originalURL')}></input>
+                    <button value="submit" type="submit">Create URL</button>
                 </form>
                 <table>
                     <thead>
