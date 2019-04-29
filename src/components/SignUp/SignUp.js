@@ -27,7 +27,6 @@ class SignUp extends Component {
                     password: this.state.password,
                 },
             });
-            this.props.history.push('/')
         } else if (this.state.password !== this.state.confirmPassword) {
             this.props.dispatch({ type: 'REGISTRATION_PASSWORD_ERROR' });
         } else {
