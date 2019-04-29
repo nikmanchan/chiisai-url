@@ -16,6 +16,25 @@ class SignUp extends Component {
         });
     }
 
+    registerUser = (event) => {
+        event.preventDefault();
+
+        if (this.state.username && this.state.password && this.state.password === this.state.confirmPassword) {
+            this.props.dispatch({
+                type: 'REGISTER',
+                payload: {
+                    username: this.state.username,
+                    password: this.state.password,
+                },
+            });
+            this.props.history.push('/dashboard')
+        } else if (this.state.password !== this.state.confirmPassword){
+            this.props.dispatch({ type: 'REGISTRATION_PASSWORD_ERROR' });
+        } else {
+            this.props.dispatch({ type: 'REGISTRATION_INPUT_ERROR' });
+        }
+    } // end registerUser
+
     render() {
         return (
             <div>
