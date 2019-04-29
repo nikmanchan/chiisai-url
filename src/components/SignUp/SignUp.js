@@ -38,6 +38,14 @@ class SignUp extends Component {
     render() {
         return (
             <div>
+                {this.props.errors.registrationMessage && (
+                    <h2
+                        className="alert"
+                        role="alert"
+                    >
+                        {this.props.errors.registrationMessage}
+                    </h2>
+                )}
                 <form onSubmit={this.registerUser}>
                     <h1>Sign Up</h1>
                     <p>Email</p>
