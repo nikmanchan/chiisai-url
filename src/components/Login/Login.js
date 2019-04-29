@@ -20,7 +20,6 @@ class LoginPage extends Component {
                     password: this.state.password,
                 },
             });
-            this.props.history.push('/welcome')
         } else {
             this.props.dispatch({ type: 'LOGIN_INPUT_ERROR' });
         }
@@ -62,7 +61,12 @@ class LoginPage extends Component {
                 </form>
 
                 <center>
-                    <button type="button">
+                    <button
+                        type="button"
+                        onClick={() => {
+                            this.props.dispatch({ type: "SET_TO_REGISTER_MODE" });
+                        }}
+                    >
                         Sign Up
                     </button>
                 </center>
