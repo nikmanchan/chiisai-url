@@ -34,7 +34,7 @@ class LoginPage extends Component {
     render() {
 
         return (
-            <div>
+            <div align="center">
                 <p>
                     You need to sign in or sign up before continuing.
                 </p>
