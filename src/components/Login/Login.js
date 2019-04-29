@@ -9,6 +9,12 @@ class LoginPage extends Component {
         password: '',
     };
 
+    handleInputChangeFor = propertyName => (event) => {
+        this.setState({
+          [propertyName]: event.target.value,
+        });
+      }
+
     render() {
 
         return (
@@ -24,13 +30,14 @@ class LoginPage extends Component {
                         required
                         type="email"
                         value={this.state.username}
-
+                        onChange={this.handleInputChangeFor("username")}
                     />
                     <p>Password</p>
                     <input
                         required
                         type="password"
                         value={this.state.password}
+                        onChange={this.handleInputChangeFor("password")}
                     />
                     <button type="submit" name="submit">
                         Sign In
