@@ -9,11 +9,28 @@ class LoginPage extends Component {
         password: '',
     };
 
+    login = (event) => {
+        event.preventDefault();
+
+        if (this.state.username && this.state.password) {
+            this.props.dispatch({
+                type: 'LOGIN',
+                payload: {
+                    username: this.state.username,
+                    password: this.state.password,
+                },
+            });
+            this.props.history.push('/welcome')
+        } else {
+            this.props.dispatch({ type: 'LOGIN_INPUT_ERROR' });
+        }
+    } // end login
+
     handleInputChangeFor = propertyName => (event) => {
         this.setState({
-          [propertyName]: event.target.value,
+            [propertyName]: event.target.value,
         });
-      }
+    }
 
     render() {
 
@@ -23,7 +40,7 @@ class LoginPage extends Component {
                     You need to sign in or sign up before continuing.
                 </p>
 
-                <form>
+                <form onSubmit={this.login}>
                     <h1> Sign In</h1>
                     <p>Email</p>
                     <input
