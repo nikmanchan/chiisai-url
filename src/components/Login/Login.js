@@ -75,4 +75,11 @@ class LoginPage extends Component {
     }
 }
 
-export default withRouter(connect(LoginPage));
+// Instead of taking everything from state, we just want the error messages.
+// if you wanted you could write this code like this:
+// const mapStateToProps = ({errors}) => ({ errors });
+const mapStateToProps = state => ({
+    errors: state.errors,
+});
+
+export default withRouter(connect(mapStateToProps)(LoginPage)));
