@@ -78,6 +78,7 @@ class SignUp extends Component {
                 <center>
                     <button
                         type="button"
+                        onClick={() => {this.props.dispatch({type: 'SET_TO_LOGIN_MODE'})}}
                     >
                         Sign In
                 </button>
