@@ -13,7 +13,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 });
 
 // Handles POST request with new user data
-router.post('/sign-up', (req, res, next) => {
+router.post('/register', (req, res, next) => {
     const username = req.body.username;
     const password = encryptLib.encryptPassword(req.body.password);
     const queryText = 'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id';
