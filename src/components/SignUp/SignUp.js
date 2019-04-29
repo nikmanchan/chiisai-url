@@ -4,6 +4,12 @@ import { withRouter } from 'react-router-dom';
 
 class SignUp extends Component {
 
+    state = {
+        username: '',
+        password: '',
+        confirmPassword: '',
+    };
+
     render() {
         return (
             <div>
@@ -13,16 +19,19 @@ class SignUp extends Component {
                     <input
                         type="text"
                         label="Email"
+                        value={this.state.username}
                     />
                     <p>Password</p>
                     <input
                         type="password"
                         label="Password"
+                        value={this.state.password}
                     />
                     <p>Confirm Password</p>
                     <input
                         type="password"
                         label="confirmPassword"
+                        value={this.state.confirmPassword}
                     />
                     <button
                         type="submit"
