@@ -14,11 +14,12 @@ class LoginPage extends Component {
 
                 <form>
                     <h1> Sign In</h1>
+                    <p>Email</p>
                     <input
                         required
                         type="email"
                     />
-
+                    <p>Password</p>
                     <input
                         required
                         type="password"
