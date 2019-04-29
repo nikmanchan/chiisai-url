@@ -31,7 +31,7 @@ class LoginPage extends Component {
 
                 <center>
                     <button type="button">
-                        Don't have an account?
+                        Sign Up
                     </button>
                 </center>
             </div >
