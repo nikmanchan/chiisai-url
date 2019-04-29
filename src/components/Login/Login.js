@@ -4,6 +4,11 @@ import { withRouter } from 'react-router-dom';
 
 class LoginPage extends Component {
 
+    state = {
+        username: '',
+        password: '',
+    };
+
     render() {
 
         return (
@@ -18,11 +23,14 @@ class LoginPage extends Component {
                     <input
                         required
                         type="email"
+                        value={this.state.username}
+
                     />
                     <p>Password</p>
                     <input
                         required
                         type="password"
+                        value={this.state.password}
                     />
                     <button type="submit" name="submit">
                         Sign In
