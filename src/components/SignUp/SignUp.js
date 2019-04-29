@@ -36,7 +36,7 @@ class SignUp extends Component {
 
     render() {
         return (
-            <div>
+            <div align="center">
                 {this.props.errors.registrationMessage && (
                     <h2
                     >
@@ -66,6 +66,7 @@ class SignUp extends Component {
                         value={this.state.confirmPassword}
                         onChange={this.handleInputChangeFor('confirmPassword')}
                     />
+                    <br></br>
                     <button
                         type="submit"
                         name="submit"
@@ -75,6 +76,7 @@ class SignUp extends Component {
                     </button>
 
                 </form>
+                <pre></pre>
                 <center>
                     <button
                         type="button"
