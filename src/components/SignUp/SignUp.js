@@ -38,7 +38,7 @@ class SignUp extends Component {
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.registerUser}>
                     <h1>Sign Up</h1>
                     <p>Email</p>
                     <input
