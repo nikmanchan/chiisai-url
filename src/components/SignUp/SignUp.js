@@ -10,6 +10,12 @@ class SignUp extends Component {
         confirmPassword: '',
     };
 
+    handleInputChangeFor = propertyName => (event) => {
+        this.setState({
+            [propertyName]: event.target.value,
+        });
+    }
+
     render() {
         return (
             <div>
@@ -20,18 +26,21 @@ class SignUp extends Component {
                         type="text"
                         label="Email"
                         value={this.state.username}
+                        onChange={this.handleInputChangeFor('username')}
                     />
                     <p>Password</p>
                     <input
                         type="password"
                         label="Password"
                         value={this.state.password}
+                        onChange={this.handleInputChangeFor('password')}
                     />
                     <p>Confirm Password</p>
                     <input
                         type="password"
                         label="confirmPassword"
                         value={this.state.confirmPassword}
+                        onChange={this.handleInputChangeFor('confirmPassword')}
                     />
                     <button
                         type="submit"
