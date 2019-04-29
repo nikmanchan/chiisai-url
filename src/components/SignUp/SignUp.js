@@ -27,8 +27,8 @@ class SignUp extends Component {
                     password: this.state.password,
                 },
             });
-            this.props.history.push('/dashboard')
-        } else if (this.state.password !== this.state.confirmPassword){
+            this.props.history.push('/')
+        } else if (this.state.password !== this.state.confirmPassword) {
             this.props.dispatch({ type: 'REGISTRATION_PASSWORD_ERROR' });
         } else {
             this.props.dispatch({ type: 'REGISTRATION_INPUT_ERROR' });
@@ -82,4 +82,9 @@ class SignUp extends Component {
     }
 }
 
-export default withRouter(SignUp);
+// Instead of taking everything from state, we just want the error messages.
+const mapStateToProps = state => ({
+    errors: state.errors
+});
+
+export default connect(mapStateToProps)(SignUp);
