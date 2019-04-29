@@ -82,4 +82,4 @@ const mapStateToProps = state => ({
     errors: state.errors,
 });
 
-export default withRouter(connect(mapStateToProps)(LoginPage)));
+export default withRouter(connect(mapStateToProps)(LoginPage));
