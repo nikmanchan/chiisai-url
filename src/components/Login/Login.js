@@ -55,10 +55,12 @@ class LoginPage extends Component {
                         value={this.state.password}
                         onChange={this.handleInputChangeFor("password")}
                     />
+                    <br></br>
                     <button type="submit" name="submit">
                         Sign In
                     </button>
                 </form>
+                <pre></pre>
 
                 <center>
                     <button
