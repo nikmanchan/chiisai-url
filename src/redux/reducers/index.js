@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import urlData from './urlReducer'
 import user from './userReducer'
 import loginMode from './loginModeReducer';
+import errors from './errorsReducer';
 
 
 // rootReducer is the primary reducer for our entire project
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
     urlData, // will store URL data in redux state 
     user, // will have an id and username if someone is logged in
     loginMode, // will have a value of 'login' or 'registration' to control which screen is shown
+    errors, // contains registrationMessage and loginMessage
 });
 
 export default rootReducer;
