@@ -40,8 +40,6 @@ class SignUp extends Component {
             <div>
                 {this.props.errors.registrationMessage && (
                     <h2
-                        className="alert"
-                        role="alert"
                     >
                         {this.props.errors.registrationMessage}
                     </h2>
