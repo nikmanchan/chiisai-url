@@ -3,12 +3,11 @@ import './App.css';
 import {
   HashRouter as Router,
   Route,
-  Redirect,
-  Switch
+  Switch,
+  Redirect
 } from "react-router-dom";
 import TinyURL from "../TinyURL/TinyURL"
-import SignUp from "../SignUp/SignUp";
-import Login from "../Login/Login";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 class App extends Component {
 
@@ -19,9 +18,13 @@ class App extends Component {
         <Router>
           <div>
             <Switch>
-              <Route path="/" exact component={TinyURL}/>
-              <Route path="/sign-up" exact component={SignUp}/>
-              <Route path="/login" exact component={Login}/>
+              {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
+              <Redirect exact from="/" to="/chiisai" />
+              {/* For protected routes, the view could show one of several things on the same route.
+                Visiting localhost:3000/home will show the UserDashboard if the user is logged in.
+                If the user is not logged in, the ProtectedRoute will show the 'Login' or 'Register' page.
+                Even though it seems like they are different pages, the user is always on localhost:3000/home */}
+              <ProtectedRoute path="/chiisai" exact component={TinyURL} />
               {/* If none of the other routes matched, we will show a 404. */}
               <Route render={() => <h1>404</h1>} />
             </Switch>
