@@ -37,7 +37,7 @@ class TinyURL extends Component {
 
     render() {
         return (
-            <div>
+            <div align="center">
                 <h1>URLs</h1>
                 <button
                     onClick={() => this.props.dispatch({ type: 'LOGOUT' })}
