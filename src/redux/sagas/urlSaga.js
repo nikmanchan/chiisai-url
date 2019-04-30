@@ -13,6 +13,7 @@ function* addURL(action) {
 
 function* fetchURLData() {
     try {
+      // retrieve URL data from the server
       const response = yield axios.get('api/url');
   
       yield put({ type: 'SET_URL_DATA', payload: response.data });
