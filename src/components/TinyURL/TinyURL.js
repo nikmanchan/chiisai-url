@@ -76,7 +76,7 @@ class TinyURL extends Component {
                     {this.props.urlData.length > 0 && 
                     <tbody>
                         {/* setup to map through standard data cells with url data stored in redux state */}
-                        {this.props.urlData[0].map((url, index) =>
+                        {this.props.urlData.map((url, index) =>
                             <tr key={index}>
                                 <td>
                                     <p>{url.original_URL}</p>
