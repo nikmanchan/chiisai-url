@@ -82,7 +82,7 @@ class TinyURL extends Component {
                                     <p>{url.original_URL}</p>
                                 </td>
                                 <td>
-                                    <a href="http://localhost:3000/chiisai/{url.id}" >
+                                    <a href={`http://localhost:3000/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
                                         http://localhost:3000/chiisai/{url.id}        
                                     </a>
                                 </td>
