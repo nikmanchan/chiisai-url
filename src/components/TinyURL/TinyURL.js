@@ -26,6 +26,12 @@ class TinyURL extends Component {
             this.setState({
                 showErrorMessage: false
             })
+            this.props.dispatch({
+                type: 'SEND_URL_DATA', 
+                payload: {
+                    originalURL: this.state.originalURL,
+                }
+            })
             console.log("URL valid!!");
         } else {
             this.setState({
@@ -69,7 +75,7 @@ class TinyURL extends Component {
 
 // Instead of taking everything from state, we just want the URL data.
 const mapStateToProps = state => ({
-    urlData: state.urlData
+    urlData: state.urlData,
 });
 
 export default connect(mapStateToProps)(TinyURL);
