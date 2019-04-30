@@ -81,7 +81,11 @@ class TinyURL extends Component {
                                 <td>
                                     <p>{url.original_URL}</p>
                                 </td>
-                                <td>http://localhost:3000/chiisai/{url.id}</td>
+                                <td>
+                                    <a href="http://localhost:3000/chiisai/{url.id}" >
+                                        http://localhost:3000/chiisai/{url.id}        
+                                    </a>
+                                </td>
                                 <td>{url.hit_count}</td>
                             </tr>
                         )}
