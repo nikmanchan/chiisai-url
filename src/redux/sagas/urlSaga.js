@@ -6,6 +6,7 @@ function* addURL(action) {
     try {
         // sends URL data to the server
         yield axios.post('api/url', action.payload);
+        yield put({ type: 'FETCH_URL_DATA' });
     } catch (error) {
         console.log('Error with URL data POST to server:', error);
     }
@@ -13,14 +14,14 @@ function* addURL(action) {
 
 function* fetchURLData() {
     try {
-      // retrieve URL data from the server
-      const response = yield axios.get('api/url');
-  
-      yield put({ type: 'SET_URL_DATA', payload: response.data });
+        // retrieve URL data from the server
+        const response = yield axios.get('api/url');
+
+        yield put({ type: 'SET_URL_DATA', payload: response.data });
     } catch (error) {
-      console.log('URL data get request failed', error);
+        console.log('URL data get request failed', error);
     }
-  }
+}
 
 
 function* urlSaga() {
