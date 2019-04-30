@@ -26,12 +26,12 @@ class TinyURL extends Component {
             this.setState({
                 showErrorMessage: false
             })
-            console.log("matches!");
+            console.log("URL valid!!");
         } else {
             this.setState({
                 showErrorMessage: true
             })
-            console.log("not matches!");
+            console.log("URL invalid!");
         }
     }
 
