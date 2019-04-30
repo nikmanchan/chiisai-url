@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
 import './App.css';
 import {
   HashRouter as Router,
@@ -10,7 +11,9 @@ import TinyURL from "../TinyURL/TinyURL"
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 class App extends Component {
-
+  componentDidMount() {
+    this.props.dispatch({ type: "FETCH_USER" });
+  }
 
   render() {
     return (
@@ -35,4 +38,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect()(App);
