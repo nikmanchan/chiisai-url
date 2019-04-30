@@ -51,6 +51,7 @@ class SignUp extends Component {
                         label="Email"
                         value={this.state.username}
                         onChange={this.handleInputChangeFor('username')}
+                        required
                     />
                     <p>Password <span>(6 character min.)</span></p>
                     <input
