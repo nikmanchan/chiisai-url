@@ -68,15 +68,24 @@ class TinyURL extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th>Origing URL</th>
+                            <th>Original URL</th>
                             <th>Tiny URL</th>
                             <th>Hit Count</th>
                         </tr>
                     </thead>
+                    {this.props.urlData.length > 0 && 
                     <tbody>
                         {/* setup to map through standard data cells with url data stored in redux state */}
-
-                    </tbody>
+                        {this.props.urlData[0].map((url, index) =>
+                            <tr key={index}>
+                                <td>
+                                    <p>{url.original_URL}</p>
+                                </td>
+                                <td>http://localhost:3000/chiisai/{url.id}</td>
+                                <td>{url.hit_count}</td>
+                            </tr>
+                        )}
+                    </tbody>}
                 </table>
             </div>
         );
