@@ -33,6 +33,10 @@ class TinyURL extends Component {
                 }
             })
             console.log("URL valid!!");
+            // clear originalURL if URL is valid and sent
+            this.setState({
+                originalURL: ''
+            })
         } else {
             this.setState({
                 showErrorMessage: true
