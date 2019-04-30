@@ -25,6 +25,13 @@ app.use(passport.session());
 /* Routes */
 app.use('/api/user', userRouter);
 app.use('/api/url', urlRouter);
+app.use('/chiisai/:id', function (req, res, next) {
+    console.log("hit chiisai route!")
+});
+
+app.get('/chiisai/:id', function (req, res) {
+    res.send('<b>Hello</b> welcome to my http server made with express');
+});
 
 // Serve static files
 app.use(express.static('build'));
@@ -34,5 +41,5 @@ const PORT = process.env.PORT || 5000;
 
 /** Listen * */
 app.listen(PORT, () => {
-  console.log(`Listening on port: ${PORT}`);
+    console.log(`Listening on port: ${PORT}`);
 });
