@@ -1,7 +1,7 @@
-const urlReducer = (state = [], action) => {
+const urlReducer = (state = {}, action) => {
     switch (action.type) {
       case 'SET_URL_DATA':
-        return [...state, action.payload];
+        return action.payload;
       case 'CLEAR_URL_DATA':
         return [];
       default:
