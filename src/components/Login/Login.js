@@ -50,8 +50,9 @@ class LoginPage extends Component {
                     />
                     <p>Password</p>
                     <input
-                        required
                         type="password"
+                        pattern=".{6,}"   
+                        required title="6 characters minimum"
                         value={this.state.password}
                         onChange={this.handleInputChangeFor("password")}
                     />
