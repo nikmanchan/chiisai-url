@@ -20,9 +20,24 @@ router.post('/', (req, res) => {
             console.log('Error with URL data INSERT statement into shortened_URLs table:', error);
             res.sendStatus(500)
         })
-    } else{
+    } else {
         console.log('Invalid URL sent to server')
     }
+});
+
+// Handles GET request with URL data
+router.get('/', (req, res) => {
+
+    const queryText = `SELECT * FROM "shortened_URLs"
+    WHERE user_id = $1;`;
+    pool.query(queryText, [req.user.id])
+        .then(results => {
+            res.send(results.rows);
+        })
+        .catch(error => {
+            console.log('ERROR with GET URL data from database:', error);
+            res.sendStatus(500);
+        })
 });
 
 module.exports = router;
