@@ -55,6 +55,8 @@ class SignUp extends Component {
                     <p>Password <span>(6 character min.)</span></p>
                     <input
                         type="password"
+                        pattern=".{6,}"   
+                        required title="6 characters minimum"
                         label="Password"
                         value={this.state.password}
                         onChange={this.handleInputChangeFor('password')}
@@ -62,6 +64,8 @@ class SignUp extends Component {
                     <p>Confirm Password</p>
                     <input
                         type="password"
+                        pattern=".{6,}"   
+                        required title="6 characters minimum"
                         label="confirmPassword"
                         value={this.state.confirmPassword}
                         onChange={this.handleInputChangeFor('confirmPassword')}
