@@ -11,10 +11,20 @@ function* addURL(action) {
     }
 }
 
+function* fetchURLData() {
+    try {
+      const response = yield axios.get('api/url');
+  
+      yield put({ type: 'SET_URL_DATA', payload: response.data });
+    } catch (error) {
+      console.log('URL data get request failed', error);
+    }
+  }
 
 
 function* urlSaga() {
     yield takeLatest('SEND_URL_DATA', addURL);
+    yield takeLatest('FETCH_URL_DATA', fetchURLData);
 }
 
 export default urlSaga;
