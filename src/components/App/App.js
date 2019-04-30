@@ -31,7 +31,7 @@ class App extends Component {
               <ProtectedRoute path="/" exact component={TinyURL} />
 
               {/* Unprotected Routes */}
-              <Route path="/chiisai" exact component={Chiisai}/>
+              {/* <Route path="/chiisai" exact component={Chiisai}/> */}
 
               {/* If none of the other routes matched, we will show a 404. */}
               <Route render={() => <h1>404</h1>} />
