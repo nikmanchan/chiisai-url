@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 
 class TinyURL extends Component {
+    componentDidMount(){
+        this.props.dispatch({
+            type: 'FETCH_URL_DATA'
+        })
+    }
+
     state = {
         originalURL: "",
         showErrorMessage: false,
