@@ -52,7 +52,7 @@ class SignUp extends Component {
                         value={this.state.username}
                         onChange={this.handleInputChangeFor('username')}
                     />
-                    <p>Password</p>
+                    <p>Password <span>(6 character min.)</span></p>
                     <input
                         type="password"
                         label="Password"
