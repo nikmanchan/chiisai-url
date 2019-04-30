@@ -47,7 +47,7 @@ class SignUp extends Component {
                     <h1>Sign Up</h1>
                     <p>Email</p>
                     <input
-                        type="text"
+                        type="email"
                         label="Email"
                         value={this.state.username}
                         onChange={this.handleInputChangeFor('username')}
