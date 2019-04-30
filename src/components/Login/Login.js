@@ -35,6 +35,12 @@ class LoginPage extends Component {
 
         return (
             <div align="center">
+                {this.props.errors.loginMessage && (
+                    <h2
+                    >
+                        {this.props.errors.loginMessage}
+                    </h2>
+                )}
                 <p>
                     You need to sign in or sign up before continuing.
                 </p>
@@ -51,7 +57,7 @@ class LoginPage extends Component {
                     <p>Password</p>
                     <input
                         type="password"
-                        pattern=".{6,}"   
+                        pattern=".{6,}"
                         required title="6 characters minimum"
                         value={this.state.password}
                         onChange={this.handleInputChangeFor("password")}
