@@ -4,12 +4,10 @@ import './App.css';
 import {
   HashRouter as Router,
   Route,
-  Switch,
-  Redirect
+  Switch
 } from "react-router-dom";
 import TinyURL from "../TinyURL/TinyURL"
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
-import Chiisai from "../Chiisai/Chiisai";
 
 class App extends Component {
   componentDidMount() {
@@ -22,8 +20,6 @@ class App extends Component {
         <Router>
           <div>
             <Switch>
-            {/* <Redirect exact from={`/chiisai/${toString(Number)}`} to="/chiisai" /> */}
-
               {/* For protected routes, the view could show one of several things on the same route.
                 Visiting localhost:3000/home will show the UserDashboard if the user is logged in.
                 If the user is not logged in, the ProtectedRoute will show the 'Login' or 'Register' page.
