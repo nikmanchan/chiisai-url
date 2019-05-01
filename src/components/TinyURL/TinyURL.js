@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 
 class TinyURL extends Component {
-    componentDidMount(){
+    componentDidMount() {
         this.props.dispatch({
             type: 'FETCH_URL_DATA'
         })
@@ -33,7 +33,7 @@ class TinyURL extends Component {
                 showErrorMessage: false
             })
             this.props.dispatch({
-                type: 'SEND_URL_DATA', 
+                type: 'SEND_URL_DATA',
                 payload: {
                     originalURL: this.state.originalURL,
                 }
@@ -54,43 +54,45 @@ class TinyURL extends Component {
     render() {
         return (
             <div className="mainContainer">
-                <h1>URLs</h1>
-                <button
-                    onClick={() => this.props.dispatch({ type: 'LOGOUT' })}
-                >
-                    Sign Out
+                <div className="secondaryContainer">
+                    <h1>URLs</h1>
+                    <button
+                        onClick={() => this.props.dispatch({ type: 'LOGOUT' })}
+                    >
+                        Sign Out
                 </button>
-                <form onSubmit={this.handleFormSubmit}>
-                    <input required value={this.state.originalURL} onChange={this.handleInputChange('originalURL')}></input>
-                    {this.state.showErrorMessage === true && <p>Error: Long URL is not a valid URL</p>}
-                    <button value="submit" type="submit">Create URL</button>
-                </form>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Original URL</th>
-                            <th>Tiny URL</th>
-                            <th>Hit Count</th>
-                        </tr>
-                    </thead>
-                    {this.props.urlData.length > 0 && 
-                    <tbody>
-                        {/* setup to map through standard data cells with url data stored in redux state */}
-                        {this.props.urlData.map((url, index) =>
-                            <tr key={index}>
-                                <td>
-                                    <p>{url.original_URL}</p>
-                                </td>
-                                <td>
-                                    <a href={`https://chiisai.herokuapp.com/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
-                                        https://chiisai.herokuapp.com/chiisai/{url.id}        
-                                    </a>
-                                </td>
-                                <td>{url.hit_count}</td>
+                    <form onSubmit={this.handleFormSubmit}>
+                        <input required value={this.state.originalURL} onChange={this.handleInputChange('originalURL')}></input>
+                        {this.state.showErrorMessage === true && <p>Error: Long URL is not a valid URL</p>}
+                        <button value="submit" type="submit">Create URL</button>
+                    </form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Original URL</th>
+                                <th>Tiny URL</th>
+                                <th>Hit Count</th>
                             </tr>
-                        )}
-                    </tbody>}
-                </table>
+                        </thead>
+                        {this.props.urlData.length > 0 &&
+                            <tbody>
+                                {/* setup to map through standard data cells with url data stored in redux state */}
+                                {this.props.urlData.map((url, index) =>
+                                    <tr key={index}>
+                                        <td>
+                                            <p>{url.original_URL}</p>
+                                        </td>
+                                        <td>
+                                            <a href={`https://chiisai.herokuapp.com/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
+                                                https://chiisai.herokuapp.com/chiisai/{url.id}
+                                            </a>
+                                        </td>
+                                        <td>{url.hit_count}</td>
+                                    </tr>
+                                )}
+                            </tbody>}
+                    </table>
+                </div>
             </div>
         );
     }
