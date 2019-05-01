@@ -55,12 +55,14 @@ class TinyURL extends Component {
         return (
             <div className="mainContainer">
                 <div className="secondaryContainer">
-                    <h1>URLs</h1>
-                    <button
-                        onClick={() => this.props.dispatch({ type: 'LOGOUT' })}
-                    >
-                        Sign Out
-                </button>
+                    <div className="headerContainer">
+                        <h1>URLs</h1>
+                        <button
+                            onClick={() => this.props.dispatch({ type: 'LOGOUT' })}
+                        >
+                            Sign Out
+                        </button>
+                    </div>
                     <form onSubmit={this.handleFormSubmit}>
                         <input required value={this.state.originalURL} onChange={this.handleInputChange('originalURL')}></input>
                         {this.state.showErrorMessage === true && <p>Error: Long URL is not a valid URL</p>}
