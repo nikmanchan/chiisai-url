@@ -73,7 +73,7 @@ class TinyURL extends Component {
                                 id="urlInput"
                             >
                             </input>
-                            {this.state.showErrorMessage === true && <p>Error: Long URL is not a valid URL</p>}
+                            {this.state.showErrorMessage === true && <p id="errorSpan">Error: Long URL is not a valid URL</p>}
                             <button
                                 value="submit"
                                 type="submit"
