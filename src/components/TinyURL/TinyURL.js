@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
+import "./TinyURL.css";
+
 
 class TinyURL extends Component {
     componentDidMount() {
