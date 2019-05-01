@@ -4,6 +4,7 @@ body{
     height: 100%;
     color: #00334D;
     font-family: sans-serif;
+    font-weight: 100;
 }
 
 .mainContainer {
@@ -49,7 +50,7 @@ body{
 .urlForm {
     width: 100%;
     background-color: white;
-    height: 20vh;
+    height: 24vh;
     border: 1px solid #00334D;
     border-radius: 5px;
 }
@@ -65,7 +66,7 @@ body{
     width: 100%;
     margin: auto;
     padding: 0;
-    height: 4vh;
+    height: 5vh;
     margin-top: 4vh;
     border: 1px solid #00334D;
     border-radius: 5px;
@@ -73,9 +74,13 @@ body{
 
 #createURLButton {
     border: none;
+    border-radius: 5px;
     background-color: #EE3F36;
     color: white;
-    width: 10vw;
-    height: 5vh;
+    width: 12vw;
+    height: 6vh;
     float: left;
+    margin-top: 4vh;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
