@@ -47,7 +47,7 @@ class LoginPage extends Component {
                 </p>
 
                 <form onSubmit={this.login} className="userForm" id="loginForm">
-                    <h1> Sign In</h1>
+                    <h1 className="userHeader"> Sign In</h1>
                     <p>Email</p>
                     <input
                         required
