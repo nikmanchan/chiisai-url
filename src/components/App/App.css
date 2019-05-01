@@ -144,3 +144,8 @@ td {
     border: 1px solid #00334D;
     border-radius: 5px;
 }
+
+a {
+    color: #00334D;
+    text-decoration: none; /* no underline */
+  }
