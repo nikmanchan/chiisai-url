@@ -77,6 +77,7 @@ class SignUp extends Component {
                         />
                         <br></br>
                         <button
+                            className="primaryUserButton"
                             type="submit"
                             name="submit"
                             value="Register"
