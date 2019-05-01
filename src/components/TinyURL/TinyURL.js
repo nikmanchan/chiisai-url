@@ -86,9 +86,16 @@ class TinyURL extends Component {
                                             <p>{url.original_URL}</p>
                                         </td>
                                         <td>
+                                            {/* check if environment is in production or development and render accordingly */}
+                                            {process.env.NODE_ENV === 'production' ? 
                                             <a href={`https://chiisai.herokuapp.com/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
                                                 https://chiisai.herokuapp.com/chiisai/{url.id}
                                             </a>
+                                            :
+                                            <a href={`https://localhost:5000/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
+                                                https://localhost:5000/chiisai/{url.id}
+                                            </a>
+                                            }
                                         </td>
                                         <td>{url.hit_count}</td>
                                     </tr>
