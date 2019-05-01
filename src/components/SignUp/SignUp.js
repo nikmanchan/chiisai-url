@@ -46,7 +46,7 @@ class SignUp extends Component {
                 <form onSubmit={this.registerUser} className="userForm" id="signUpForm">
                     <h1 className="userHeader">Sign Up</h1>
                     <div className="userSecondaryContainer" align="left">
-                        <p>Email</p>
+                        <p className="userCaption">Email</p>
                         <input
                             type="email"
                             label="Email"
@@ -54,7 +54,7 @@ class SignUp extends Component {
                             onChange={this.handleInputChangeFor('username')}
                             required
                         />
-                        <p>Password <span>(6 character min.)</span></p>
+                        <p className="userCaption">Password <span>(6 character min.)</span></p>
                         <input
                             type="password"
                             pattern=".{6,}"
@@ -63,7 +63,7 @@ class SignUp extends Component {
                             value={this.state.password}
                             onChange={this.handleInputChangeFor('password')}
                         />
-                        <p>Confirm Password</p>
+                        <p className="userCaption">Confirm Password</p>
                         <input
                             type="password"
                             pattern=".{6,}"

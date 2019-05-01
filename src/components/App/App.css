@@ -55,3 +55,8 @@ a {
     width: 86%;
     margin: auto;
 }
+
+.userCaption {
+    color: #00334D;
+    font-weight: 500;
+}
