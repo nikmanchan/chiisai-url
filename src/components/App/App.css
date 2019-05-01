@@ -37,10 +37,10 @@ a {
   }
 
 .userForm {
-    width: 30%;
+    width: 28%;
     background-color: white;
     height: 24vh;
-    border: 1px solid #00334D;
+    border: 2px solid rgb(116, 149, 161);
     border-radius: 5px;
     margin: auto;
 }
