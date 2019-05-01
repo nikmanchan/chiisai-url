@@ -6,7 +6,7 @@ const router = express.Router();
 // Handles GET request with URL data
 router.get('/:id', (req, res) => {
     let id = req.params.id;
-    
+
     const queryText = `SELECT * FROM "shortened_URLs" WHERE id = $1;`;
     // Get all urlData by id from shortened_URLs column
     pool.query(queryText, [id])
@@ -17,8 +17,8 @@ router.get('/:id', (req, res) => {
 
             // Update hit_count
             pool.query(queryText2, [id])
-                .then(results => {
-                    console.log('success with update hit_count', results.rows)
+                .then(() => {
+                    console.log('success with update hit_count')
                 })
                 .catch(error => {
                     console.log('ERROR with updating hit count in database:', error);
