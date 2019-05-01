@@ -64,3 +64,12 @@ body{
     border: 1px solid #00334D;
     border-radius: 5px;
 }
+
+#createURLButton {
+    border: none;
+    background-color: #EE3F36;
+    color: white;
+    width: 10vw;
+    height: 5vh;
+    float: left;
+}
