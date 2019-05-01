@@ -1,17 +1,19 @@
 body{
     background-color: #808080;
-    width: 80vw;
     margin: auto;
     height: 100%;
 }
 
 .mainContainer {
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin: auto;
     background-color: #F2F2F2;
     height: 100%;
     position:fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 0;
 }
 
 .secondaryContainer {
@@ -22,4 +24,13 @@ body{
 .headerContainer {
     width: 100%;
     margin-top: 10vh;
+    height: 10vh;
+}
+
+#urlHeader {
+    float: left;
+}
+
+#signOutButton {
+    float: right;
 }
