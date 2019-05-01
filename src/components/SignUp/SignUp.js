@@ -35,7 +35,7 @@ class SignUp extends Component {
 
     render() {
         return (
-            <div align="center">
+            <div align="center" className="mainContainer">
                 {this.props.errors.registrationMessage && (
                     <h2
                     >
