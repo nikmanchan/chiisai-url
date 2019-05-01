@@ -3,6 +3,7 @@ body{
     margin: auto;
     height: 100%;
     color: #00334D;
+    font-family: sans-serif;
 }
 
 .mainContainer {
@@ -18,13 +19,13 @@ body{
 }
 
 .secondaryContainer {
-    width: 80%;
+    width: 78%;
     margin: auto;
 }
 
 .headerContainer {
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 11vh;
     height: 10vh;
 }
 
@@ -32,6 +33,7 @@ body{
     float: left;
     margin-top: 0;
     font-weight: normal;
+    font-size: 40px;
 }
 
 #signOutButton {
