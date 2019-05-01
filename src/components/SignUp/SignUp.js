@@ -48,6 +48,7 @@ class SignUp extends Component {
                     <div className="userSecondaryContainer" align="left">
                         <p className="userCaption">Email</p>
                         <input
+                            className="userInput"
                             type="email"
                             label="Email"
                             value={this.state.username}
@@ -56,6 +57,7 @@ class SignUp extends Component {
                         />
                         <p className="userCaption">Password <span>(6 character min.)</span></p>
                         <input
+                            className="userInput"
                             type="password"
                             pattern=".{6,}"
                             required title="6 characters minimum"
@@ -65,6 +67,7 @@ class SignUp extends Component {
                         />
                         <p className="userCaption">Confirm Password</p>
                         <input
+                            className="userInput"
                             type="password"
                             pattern=".{6,}"
                             required title="6 characters minimum"
