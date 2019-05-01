@@ -7,6 +7,18 @@ body{
     font-weight: 100;
 }
 
+input[type="text"]{
+    font-size: 16px;
+    color: #00334D;
+    padding-left: 16px;
+  }
+
+input[type="email"]{
+    font-size: 16px;
+    color: #00334D;
+    padding-left: 12px;
+  }
+
 .mainContainer {
     text-align: center;
     width: 100%;
@@ -65,7 +77,9 @@ body{
     display: block;
     width: 100%;
     margin: auto;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
     height: 5vh;
     margin-top: 4vh;
     border: 1px solid #00334D;
