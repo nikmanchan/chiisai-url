@@ -71,7 +71,7 @@ class TinyURL extends Component {
                                 required
                                 value={this.state.originalURL}
                                 onChange={this.handleInputChange('originalURL')}
-                                id="urlInput"
+                                id={this.state.showErrorMessage === false ? 'urlInput' : 'errorInput'}
                             >
                             </input>
                             {this.state.showErrorMessage === true && <p id="errorSpan">Error: Long URL is not a valid URL</p>}

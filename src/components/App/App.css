@@ -86,6 +86,19 @@ input[type="email"]{
     border-radius: 5px;
     margin-bottom: 2vh;
 }
+#errorInput {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    height: 5vh;
+    margin-top: 4vh;
+    border: 1px solid #EE3F36;
+    border-radius: 5px;
+    margin-bottom: 2vh;
+}
 
 #createURLButton {
     border: none;
