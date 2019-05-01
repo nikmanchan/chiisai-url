@@ -82,8 +82,8 @@ class TinyURL extends Component {
                                     <p>{url.original_URL}</p>
                                 </td>
                                 <td>
-                                    <a href={`https://chiisai.herokuapp.com/${url.id}`} rel="noopener noreferrer" target="_blank">
-                                        https://chiisai.herokuapp.com/{url.id}        
+                                    <a href={`https://chiisai.herokuapp.com/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
+                                        https://chiisai.herokuapp.com/chiisai/{url.id}        
                                     </a>
                                 </td>
                                 <td>{url.hit_count}</td>
