@@ -1,5 +1,8 @@
 body{
     background-color: #808080;
+    width: 80vw;
+    margin: auto;
+    height: 100%;
 }
 
 .mainContainer {
