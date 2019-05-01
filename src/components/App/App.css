@@ -26,7 +26,7 @@ body{
 .headerContainer {
     width: 100%;
     margin-top: 11vh;
-    height: 10vh;
+    height: 8vh;
 }
 
 #urlHeader {
@@ -42,6 +42,14 @@ body{
     color: #00334D;
     font-size: 16px;
     vertical-align: bottom;
-    margin-top: 10px;
+    margin-top: 12px;
     float: right;
+}
+
+.urlForm {
+    width: 100%;
+    background-color: white;
+    height: 20vh;
+    border: 1px solid #00334D;
+    border-radius: 5px;
 }
