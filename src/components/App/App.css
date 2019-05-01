@@ -53,3 +53,14 @@ body{
     border: 1px solid #00334D;
     border-radius: 5px;
 }
+
+#urlInput {
+    display: block;
+    width: 94%;
+    margin: auto;
+    padding: 0;
+    height: 4vh;
+    margin-top: 4vh;
+    border: 1px solid #00334D;
+    border-radius: 5px;
+}
