@@ -49,25 +49,26 @@ class LoginPage extends Component {
                 <form onSubmit={this.login} className="userForm" id="loginForm">
                     <div className="userSecondaryContainer">
                         <h1 className="userHeader"> Sign In</h1>
-                        <p>Email</p>
+                        <p className="userCaption" align="left">Email</p>
                         <input
+                            className="userInput"
                             required
                             type="email"
                             value={this.state.username}
                             onChange={this.handleInputChangeFor("username")}
                         />
-                        <p>Password</p>
+                        <p className="userCaption" align="left">Password</p>
                         <input
+                            className="userInput"
                             type="password"
                             pattern=".{6,}"
                             required title="6 characters minimum"
                             value={this.state.password}
                             onChange={this.handleInputChangeFor("password")}
                         />
-                        <br></br>
                         <button type="submit" name="submit">
                             Sign In
-                    </button>
+                        </button>
                     </div>
                 </form>
                 <pre></pre>
