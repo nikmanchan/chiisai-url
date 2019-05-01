@@ -14,7 +14,7 @@ Run "npm run server" in another command line window to start-up server.
 
 Connect to local PostgreSQL server at Port: 5432.
 
-Create a database named "chiisai_url" and run SQL queries in database.sql file.
+Create a database named "chiisai_url" and run SQL queries in database.sql file in sequential order from the top.
 
 The app will now be available locally.
 
