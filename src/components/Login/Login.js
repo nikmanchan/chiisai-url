@@ -47,26 +47,28 @@ class LoginPage extends Component {
                 </p>
 
                 <form onSubmit={this.login} className="userForm" id="loginForm">
-                    <h1 className="userHeader"> Sign In</h1>
-                    <p>Email</p>
-                    <input
-                        required
-                        type="email"
-                        value={this.state.username}
-                        onChange={this.handleInputChangeFor("username")}
-                    />
-                    <p>Password</p>
-                    <input
-                        type="password"
-                        pattern=".{6,}"
-                        required title="6 characters minimum"
-                        value={this.state.password}
-                        onChange={this.handleInputChangeFor("password")}
-                    />
-                    <br></br>
-                    <button type="submit" name="submit">
-                        Sign In
+                    <div className="userSecondaryContainer">
+                        <h1 className="userHeader"> Sign In</h1>
+                        <p>Email</p>
+                        <input
+                            required
+                            type="email"
+                            value={this.state.username}
+                            onChange={this.handleInputChangeFor("username")}
+                        />
+                        <p>Password</p>
+                        <input
+                            type="password"
+                            pattern=".{6,}"
+                            required title="6 characters minimum"
+                            value={this.state.password}
+                            onChange={this.handleInputChangeFor("password")}
+                        />
+                        <br></br>
+                        <button type="submit" name="submit">
+                            Sign In
                     </button>
+                    </div>
                 </form>
                 <pre></pre>
 
