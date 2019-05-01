@@ -45,7 +45,7 @@ class LoginPage extends Component {
                     You need to sign in or sign up before continuing.
                 </p>
 
-                <form onSubmit={this.login}>
+                <form onSubmit={this.login} className="userForm" id="loginForm">
                     <h1> Sign In</h1>
                     <p>Email</p>
                     <input
