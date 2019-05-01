@@ -56,8 +56,9 @@ class TinyURL extends Component {
             <div className="mainContainer">
                 <div className="secondaryContainer">
                     <div className="headerContainer">
-                        <h1>URLs</h1>
-                        <button
+                        <h1 id="urlHeader">URLs</h1>
+                        <button 
+                            id="signOutButton"
                             onClick={() => this.props.dispatch({ type: 'LOGOUT' })}
                         >
                             Sign Out
