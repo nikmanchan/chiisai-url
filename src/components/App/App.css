@@ -54,9 +54,15 @@ body{
     border-radius: 5px;
 }
 
+.formContainer {
+    width: 94%;
+    height: 15vh;
+    margin: auto;
+}
+
 #urlInput {
     display: block;
-    width: 94%;
+    width: 100%;
     margin: auto;
     padding: 0;
     height: 4vh;
