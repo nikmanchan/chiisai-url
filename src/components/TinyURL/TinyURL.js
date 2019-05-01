@@ -57,7 +57,7 @@ class TinyURL extends Component {
                 <div className="secondaryContainer">
                     <div className="headerContainer">
                         <h1 id="urlHeader">URLs</h1>
-                        <button 
+                        <button
                             id="signOutButton"
                             onClick={() => this.props.dispatch({ type: 'LOGOUT' })}
                         >
@@ -65,9 +65,21 @@ class TinyURL extends Component {
                         </button>
                     </div>
                     <form onSubmit={this.handleFormSubmit} className="urlForm">
-                        <input required value={this.state.originalURL} onChange={this.handleInputChange('originalURL')}></input>
+                        <input
+                            required
+                            value={this.state.originalURL}
+                            onChange={this.handleInputChange('originalURL')}
+                            id="urlInput"
+                        >
+                        </input>
                         {this.state.showErrorMessage === true && <p>Error: Long URL is not a valid URL</p>}
-                        <button value="submit" type="submit">Create URL</button>
+                        <button
+                            value="submit"
+                            type="submit"
+                            id="createURLButton"
+                        >
+                            Create URL
+                        </button>
                     </form>
                     <table>
                         <thead>
@@ -87,14 +99,14 @@ class TinyURL extends Component {
                                         </td>
                                         <td>
                                             {/* check if environment is in production or development and render accordingly */}
-                                            {process.env.NODE_ENV === 'production' ? 
-                                            <a href={`https://chiisai.herokuapp.com/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
-                                                https://chiisai.herokuapp.com/chiisai/{url.id}
-                                            </a>
-                                            :
-                                            <a href={`http://localhost:5000/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
-                                                http://localhost:5000/chiisai/{url.id}
-                                            </a>
+                                            {process.env.NODE_ENV === 'production' ?
+                                                <a href={`https://chiisai.herokuapp.com/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
+                                                    https://chiisai.herokuapp.com/chiisai/{url.id}
+                                                </a>
+                                                :
+                                                <a href={`http://localhost:5000/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
+                                                    http://localhost:5000/chiisai/{url.id}
+                                                </a>
                                             }
                                         </td>
                                         <td>{url.hit_count}</td>
