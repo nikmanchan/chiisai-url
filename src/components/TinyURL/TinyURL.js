@@ -65,7 +65,7 @@ class TinyURL extends Component {
                         </button>
                     </div>
                     <form onSubmit={this.handleFormSubmit} className="urlForm">
-                        <div className="formContainer">
+                        <div className="formContainer" align="left">
                             <input
                                 required
                                 value={this.state.originalURL}
