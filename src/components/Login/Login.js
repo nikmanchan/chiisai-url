@@ -66,23 +66,20 @@ class LoginPage extends Component {
                             value={this.state.password}
                             onChange={this.handleInputChangeFor("password")}
                         />
-                        <button type="submit" name="submit">
+                        <button type="submit" name="submit" className="primaryUserButton">
                             Sign In
+                        </button>
+                        <button
+                            className="secondaryUserButton"
+                            type="button"
+                            onClick={() => {
+                                this.props.dispatch({ type: "SET_TO_REGISTER_MODE" });
+                            }}
+                        >
+                            Sign Up
                         </button>
                     </div>
                 </form>
-                <pre></pre>
-
-                <center>
-                    <button
-                        type="button"
-                        onClick={() => {
-                            this.props.dispatch({ type: "SET_TO_REGISTER_MODE" });
-                        }}
-                    >
-                        Sign Up
-                    </button>
-                </center>
             </div >
         );
     }
