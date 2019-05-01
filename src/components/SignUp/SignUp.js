@@ -44,7 +44,7 @@ class SignUp extends Component {
                     </h2>
                 )}
                 <form onSubmit={this.registerUser} className="userForm" id="signUpForm">
-                    <h1>Sign Up</h1>
+                    <h1 className="userHeader">Sign Up</h1>
                     <p>Email</p>
                     <input
                         type="email"
