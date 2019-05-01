@@ -35,3 +35,12 @@ a {
     color: #00334D;
     text-decoration: none; /* no underline */
   }
+
+.userForm {
+    width: 30%;
+    background-color: white;
+    height: 24vh;
+    border: 1px solid #00334D;
+    border-radius: 5px;
+    margin: auto;
+}

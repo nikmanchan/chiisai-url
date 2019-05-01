@@ -43,7 +43,7 @@ class SignUp extends Component {
                         {this.props.errors.registrationMessage}
                     </h2>
                 )}
-                <form onSubmit={this.registerUser}>
+                <form onSubmit={this.registerUser} className="userForm">
                     <h1>Sign Up</h1>
                     <p>Email</p>
                     <input
