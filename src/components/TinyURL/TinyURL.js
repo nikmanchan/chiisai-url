@@ -92,8 +92,8 @@ class TinyURL extends Component {
                                                 https://chiisai.herokuapp.com/chiisai/{url.id}
                                             </a>
                                             :
-                                            <a href={`https://localhost:5000/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
-                                                https://localhost:5000/chiisai/{url.id}
+                                            <a href={`http://localhost:5000/chiisai/${url.id}`} rel="noopener noreferrer" target="_blank">
+                                                http://localhost:5000/chiisai/{url.id}
                                             </a>
                                             }
                                         </td>
