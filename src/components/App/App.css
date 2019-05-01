@@ -70,12 +70,14 @@ a {
 .userSecondaryContainer {
     width: 86%;
     margin: auto;
+    text-align: center;
 }
 
 .userCaption {
     color: #00334D;
     font-weight: 500;
     margin-bottom: 1vh;
+    
 }
 
 .userInput {
@@ -95,4 +97,13 @@ a {
     border: transparent;
     font-size: 22px;
     margin-top: 2vh;
+    margin-bottom: 4vh;
+}
+
+.secondaryUserButton {
+    border: none;
+    background-color: transparent;
+    width: 8vw;
+    font-size: 18px; 
+    margin: 0 auto;
 }

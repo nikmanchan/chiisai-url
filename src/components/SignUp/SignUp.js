@@ -45,8 +45,8 @@ class SignUp extends Component {
                 )}
                 <form onSubmit={this.registerUser} className="userForm" id="signUpForm">
                     <h1 className="userHeader">Sign Up</h1>
-                    <div className="userSecondaryContainer" align="left">
-                        <p className="userCaption">Email</p>
+                    <div className="userSecondaryContainer">
+                        <p className="userCaption" align="left">Email</p>
                         <input
                             className="userInput"
                             type="email"
@@ -55,7 +55,7 @@ class SignUp extends Component {
                             onChange={this.handleInputChangeFor('username')}
                             required
                         />
-                        <p className="userCaption">Password <span>(6 character min.)</span></p>
+                        <p className="userCaption" align="left">Password <span>(6 character min.)</span></p>
                         <input
                             className="userInput"
                             type="password"
@@ -65,7 +65,7 @@ class SignUp extends Component {
                             value={this.state.password}
                             onChange={this.handleInputChangeFor('password')}
                         />
-                        <p className="userCaption">Confirm Password</p>
+                        <p className="userCaption" align="left">Confirm Password</p>
                         <input
                             className="userInput"
                             type="password"
@@ -86,6 +86,7 @@ class SignUp extends Component {
                         </button>
 
                         <button
+                            className="secondaryUserButton"
                             type="button"
                             onClick={() => { this.props.dispatch({ type: 'SET_TO_LOGIN_MODE' }) }}
                         >
