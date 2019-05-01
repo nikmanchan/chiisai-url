@@ -48,4 +48,10 @@ a {
 .userHeader {
     font-size: 40px;
     font-weight: normal;
+    margin-top: 2.4vh;
+}
+
+.userSecondaryContainer {
+    width: 86%;
+    margin: auto;
 }

@@ -45,47 +45,49 @@ class SignUp extends Component {
                 )}
                 <form onSubmit={this.registerUser} className="userForm" id="signUpForm">
                     <h1 className="userHeader">Sign Up</h1>
-                    <p>Email</p>
-                    <input
-                        type="email"
-                        label="Email"
-                        value={this.state.username}
-                        onChange={this.handleInputChangeFor('username')}
-                        required
-                    />
-                    <p>Password <span>(6 character min.)</span></p>
-                    <input
-                        type="password"
-                        pattern=".{6,}"
-                        required title="6 characters minimum"
-                        label="Password"
-                        value={this.state.password}
-                        onChange={this.handleInputChangeFor('password')}
-                    />
-                    <p>Confirm Password</p>
-                    <input
-                        type="password"
-                        pattern=".{6,}"
-                        required title="6 characters minimum"
-                        label="confirmPassword"
-                        value={this.state.confirmPassword}
-                        onChange={this.handleInputChangeFor('confirmPassword')}
-                    />
-                    <br></br>
-                    <button
-                        type="submit"
-                        name="submit"
-                        value="Register"
-                    >
-                        Sign Up
-                    </button>
+                    <div className="userSecondaryContainer" align="left">
+                        <p>Email</p>
+                        <input
+                            type="email"
+                            label="Email"
+                            value={this.state.username}
+                            onChange={this.handleInputChangeFor('username')}
+                            required
+                        />
+                        <p>Password <span>(6 character min.)</span></p>
+                        <input
+                            type="password"
+                            pattern=".{6,}"
+                            required title="6 characters minimum"
+                            label="Password"
+                            value={this.state.password}
+                            onChange={this.handleInputChangeFor('password')}
+                        />
+                        <p>Confirm Password</p>
+                        <input
+                            type="password"
+                            pattern=".{6,}"
+                            required title="6 characters minimum"
+                            label="confirmPassword"
+                            value={this.state.confirmPassword}
+                            onChange={this.handleInputChangeFor('confirmPassword')}
+                        />
+                        <br></br>
+                        <button
+                            type="submit"
+                            name="submit"
+                            value="Register"
+                        >
+                            Sign Up
+                        </button>
 
-                    <button
-                        type="button"
-                        onClick={() => { this.props.dispatch({ type: 'SET_TO_LOGIN_MODE' }) }}
-                    >
-                        Sign In
-                    </button>
+                        <button
+                            type="button"
+                            onClick={() => { this.props.dispatch({ type: 'SET_TO_LOGIN_MODE' }) }}
+                        >
+                            Sign In
+                        </button>
+                    </div>
                 </form>
             </div >
         );
