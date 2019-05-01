@@ -120,3 +120,27 @@ input[type="email"]{
     margin-top: 0;
     font-size: 18px;
 }
+
+.urlTable {
+    width: 100%;
+    background-color: white;
+    margin-top: 5vh;
+    text-align: left;
+    border-left: 1px solid #00334D;
+    border-collapse: collapse;  
+}
+
+th {
+    padding-left: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 26px;
+    border: 1px solid #00334D;
+    border-radius: 5px;
+}
+
+td {
+    padding-left: 18px;
+    border: 1px solid #00334D;
+    border-radius: 5px;
+}

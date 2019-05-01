@@ -84,7 +84,7 @@ class TinyURL extends Component {
                             </button>
                         </div>
                     </form>
-                    <table>
+                    <table className="urlTable">
                         <thead>
                             <tr>
                                 <th>Original URL</th>
