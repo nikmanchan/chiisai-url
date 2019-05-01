@@ -42,7 +42,7 @@ class LoginPage extends Component {
                         {this.props.errors.loginMessage}
                     </h2>
                 )}
-                <p>
+                <p id="loginCaption">
                     You need to sign in or sign up before continuing.
                 </p>
 
