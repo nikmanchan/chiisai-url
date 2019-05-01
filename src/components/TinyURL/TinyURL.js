@@ -65,21 +65,23 @@ class TinyURL extends Component {
                         </button>
                     </div>
                     <form onSubmit={this.handleFormSubmit} className="urlForm">
-                        <input
-                            required
-                            value={this.state.originalURL}
-                            onChange={this.handleInputChange('originalURL')}
-                            id="urlInput"
-                        >
-                        </input>
-                        {this.state.showErrorMessage === true && <p>Error: Long URL is not a valid URL</p>}
-                        <button
-                            value="submit"
-                            type="submit"
-                            id="createURLButton"
-                        >
-                            Create URL
-                        </button>
+                        <div className="formContainer">
+                            <input
+                                required
+                                value={this.state.originalURL}
+                                onChange={this.handleInputChange('originalURL')}
+                                id="urlInput"
+                            >
+                            </input>
+                            {this.state.showErrorMessage === true && <p>Error: Long URL is not a valid URL</p>}
+                            <button
+                                value="submit"
+                                type="submit"
+                                id="createURLButton"
+                            >
+                                Create URL
+                            </button>
+                        </div>
                     </form>
                     <table>
                         <thead>
