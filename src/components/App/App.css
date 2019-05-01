@@ -13,3 +13,8 @@ body{
     height: 100%;
     position:fixed;
 }
+
+.secondaryContainer {
+    width: 80%;
+    margin: auto;
+}
